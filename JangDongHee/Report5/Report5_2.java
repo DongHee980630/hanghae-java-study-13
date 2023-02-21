@@ -1,5 +1,5 @@
 package JangDongHee.Report5;
-
+//6-2. 6-1에서 정의한 Student 클래스에 생성자와 info()를 추가해서 실행결과와 같은 결과를 얻도록 하세요.
 public class Report5_2 {
     public static void main(String[] args) {
         Student s = new Student("홍길동",1,1,100,60,76);
