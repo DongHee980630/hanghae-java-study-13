@@ -1,9 +1,6 @@
 package SA;
 
-public class TaxiMain extends Taxi{
-    public TaxiMain(int maxPassenger, int fare, int gasAmount) {
-        super(maxPassenger, fare, gasAmount);
-    }
+public class TaxiMain {
 
     public static void main(String[] args) {
         Taxi taxi = new Taxi(4,3000,100);

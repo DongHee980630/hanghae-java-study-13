@@ -1,9 +1,6 @@
 package SA;
 
-public class BusMain extends Bus{
-    public BusMain(int maxPassenger, int fare, int gasAmount) {
-        super(maxPassenger, fare, gasAmount);
-    }
+public class BusMain {
     public static void main(String[] args) {
         Bus bus = new Bus(45,1500,100);
         Bus bus2 = new Bus(30, 1000,80);
