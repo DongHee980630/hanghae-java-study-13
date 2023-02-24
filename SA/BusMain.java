@@ -1,4 +1,4 @@
-package S.A;
+package SA;
 
 public class BusMain extends Bus{
     public BusMain(int maxPassenger, int fare, int gasAmount) {

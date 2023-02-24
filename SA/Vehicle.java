@@ -1,4 +1,4 @@
-package S.A;
+package SA;
 
 public abstract class Vehicle {
     int maxPassenger;

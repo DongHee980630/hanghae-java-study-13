@@ -1,4 +1,4 @@
-package S.A;
+package SA;
 
 public class Bus extends Vehicle{
     int busNumber = 1;

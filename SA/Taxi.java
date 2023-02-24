@@ -1,4 +1,4 @@
-package S.A;
+package SA;
 
 public class Taxi extends Vehicle {
     String destination; // 목적지
