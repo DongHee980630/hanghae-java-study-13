@@ -1,7 +1,7 @@
 package SA;
 
 public class Bus extends Vehicle{
-    int busNumber = 1;
+    private int busNumber = 1;
 
 
 
@@ -14,11 +14,11 @@ public class Bus extends Vehicle{
     }
     void changeState() {
         driving = !driving;
-        if (gasAmount < 10) {
+        if (getGasAmount() < 10) {
             System.out.println("주유가 필요합니다.");
             return;
         }
-        if(driving == false){
+        if(!driving){
             System.out.println("차고지행");
         }else {
             System.out.println("운행 중");
@@ -32,15 +32,18 @@ public class Bus extends Vehicle{
             return;
         }
         int totalPassenger = currentPassenger + count;
-        if (totalPassenger > maxPassenger){
+        if (totalPassenger > getMaxPassenger()){
             System.out.println("최대 승객수를 초과");
             return;
         }
         currentPassenger = totalPassenger;
         System.out.println("탑승 승객 수 :" +count);
-        System.out.println("잔여 승객 수 :" + (maxPassenger- totalPassenger));
+        System.out.println("잔여 승객 수 :" + (getMaxPassenger() - totalPassenger));
         System.out.println("현재 승객수 :" + totalPassenger);
-        System.out.println("요금 : " + count * fare);
+        System.out.println("요금 : " + count * getFare());
     }
 
+    public int getBusNumber() {
+        return busNumber;
+    }
 }

@@ -2,12 +2,12 @@ package SA;
 
 public class Taxi extends Vehicle {
     String destination; // 목적지
-    int distance;//목적지 까지거리
-    int defaultDistance = 1; //기본 거리
-    int distanceFare = 1000; // 거리당 요금
-    int taxiNumber;
-    int cost;
-    int total;
+    private int distance;//목적지 까지거리
+    public int defaultDistance = 1; //기본 거리
+    final int distanceFare = 1000; // 거리당 요금
+    public int taxiNumber;
+    private int cost;
+    private int total;
 
 
     public Taxi(int maxPassenger, int fare, int gasAmount) {
@@ -31,7 +31,7 @@ public class Taxi extends Vehicle {
 
     @Override
     void changeState() {
-        if (gasAmount < 10) {
+        if (getGasAmount() < 10) {
             driving = !driving;
             System.out.println("주유가 필요합니다.");
             driving = false;
@@ -45,9 +45,9 @@ public class Taxi extends Vehicle {
             System.out.println("최대 승객 수 초과");
         else
         if (driving ==true){
-           cost = fare + (distanceFare * dis);
+           cost = getFare() + (distanceFare * dis);
            total += cost;
-            System.out.println("기본 요금 확인 = "+fare);
+            System.out.println("기본 요금 확인 = "+ getFare());
             System.out.println("목적지 = " + dest);
             System.out.println("목적지까지 거리 = "+ dis+"km");
             System.out.println("지불할 요금 = "+cost);
@@ -56,7 +56,7 @@ public class Taxi extends Vehicle {
     }
     int pay() {
         System.out.println("누적 요금 = "+ total);
-        if(gasAmount < 10)
+        if(getGasAmount() < 10)
             System.out.println("주유 필요");
         cost = 0;
         return total;

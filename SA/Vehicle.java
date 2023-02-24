@@ -1,12 +1,22 @@
 package SA;
 
 public abstract class Vehicle {
-    int maxPassenger;
     int currentPassenger;
     int currentSpeed;
-    int gasAmount;
-    int fare;
-    boolean driving;
+    private final int maxPassenger;
+    private int gasAmount;
+    private final int fare;
+    public boolean driving;
+
+    public int getMaxPassenger() {
+        return maxPassenger;
+    }
+
+
+    public int getFare() {
+        return fare;
+    }
+
 
     public Vehicle(int maxPassenger, int fare, int gasAmount) {
         this.maxPassenger = maxPassenger; // 최대 승객
